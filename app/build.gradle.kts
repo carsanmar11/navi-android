@@ -17,7 +17,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders["MAPS_API_KEY"] = project.findProperty("MAPS_API_KEY")?.toString() ?: ""
+        manifestPlaceholders["MAPS_API_KEY"] =
+            (project.findProperty("MAPS_API_KEY") as String?) ?: ""
     }
 
     buildTypes {
@@ -46,4 +47,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     // Añadimos la dependencia de Google Maps
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    // Añadimos la dependencia de Lo    calización
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    // Añadimos la dependencia de material
+    implementation("com.google.android.material:material:1.12.0")
+
 }

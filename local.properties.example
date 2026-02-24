@@ -1,0 +1,2 @@
+# Copia este archivo a tu local.properties e inserta tu propia clave Google
+MAPS_API_KEY=PUT_YOUR_GOOGLE_MAPS_KEY_HERE
